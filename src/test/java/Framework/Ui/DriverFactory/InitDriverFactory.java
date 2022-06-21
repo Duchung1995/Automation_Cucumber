@@ -17,7 +17,7 @@ public class InitDriverFactory {
         String browserType = "chrome";
         driver = new ChromeDriverManagement().InitWebDriver();
         MaximizeWindow();
-        SetPageLoadTimeOut();
+//        SetPageLoadTimeOut();
         return driver;
     }
 
@@ -31,7 +31,7 @@ public class InitDriverFactory {
     }
 
     private void SetPageLoadTimeOut() {
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
+//        driver.manage().timeouts().pageLoadTimeout(100);
     }
 
 }
