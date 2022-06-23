@@ -2,11 +2,9 @@ package Framework.Ui.DriverFactory;
 
 import org.openqa.selenium.WebDriver;
 
-import java.time.Duration;
-
 public class InitDriverFactory {
 
-    WebDriver driver = null;
+    WebDriver driver;
 
     public InitDriverFactory(WebDriver driver) {
         this.driver = driver;

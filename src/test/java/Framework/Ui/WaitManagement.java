@@ -16,7 +16,7 @@ public class WaitManagement {
     }
 
     public void WaitForElement(WebElement element, long timeOutInSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
+        WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 

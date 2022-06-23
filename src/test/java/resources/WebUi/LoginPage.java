@@ -7,9 +7,16 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }
+
+    @Override
+    public void SetPageUrl(String url) {
+        super.SetPageUrl(url);
+    }
+
     @FindBy(id = "Email")
     @CacheLookup
     WebElement txtEmail;
@@ -29,6 +36,7 @@ public class LoginPage extends BasePage {
     public void setUserName(String uname) {
         txtEmail.clear();
         txtEmail.sendKeys(uname);
+
     }
 
     public void setPassword(String pwd) {
@@ -44,10 +52,8 @@ public class LoginPage extends BasePage {
         lnkLogout.click();
     }
 
-    public boolean isDisplayed(String url)
-    {
-        if (driver.getCurrentUrl().equalsIgnoreCase(url))
-        {
+    public boolean isDisplayed(String url) {
+        if (driver.getCurrentUrl().equalsIgnoreCase(url)) {
             return true;
         }
         return false;

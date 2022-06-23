@@ -1,11 +1,10 @@
 package Framework.Ui.Helper.Actions;
 
-import Framework.MasterTest.MasterTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SeleneseAction extends MasterTest {
+public class SeleneseAction {
 //    WebDriver driver;
 //    WebDriverWait wait;
 //
