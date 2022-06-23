@@ -11,7 +11,7 @@ public class ChromeDriverManagement extends DriverManagement {
     WebDriver InitWebDriver() {
         WebDriverManager.chromedriver().setup();
         try {
-            ChromeDriver ChromeDriver = new ChromeDriver(CreateChromeProfile());
+            ChromeDriver ChromeDriver = new ChromeDriver();
             return ChromeDriver;
         } catch (Exception e) {
 
@@ -19,10 +19,9 @@ public class ChromeDriverManagement extends DriverManagement {
         }
     }
 
-    private ChromeOptions CreateChromeProfile() {
-        ChromeOptions _chromeProfile = new ChromeOptions();
-        _chromeProfile.addArguments("start-maximized");
-        _chromeProfile.addArguments("--incognito");
-        return _chromeProfile;
-    }
+//    private ChromeOptions CreateChromeProfile() {
+//        ChromeOptions _chromeProfile = new ChromeOptions();
+//        _chromeProfile.addArguments("start-maximized");
+//        return _chromeProfile;
+//    }
 }

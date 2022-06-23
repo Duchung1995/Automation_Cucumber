@@ -1,23 +1,18 @@
 package Framework;
 
+import Framework.Ui.DriverFactory.InitDriverFactory;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+import resources.StepDefinitions.Hooks;
 
 public abstract class BasePage {
 
     public WebDriver driver;
 
-    public BasePage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
-
-    public void SetPageUrl(String url) {
-        driver.get(url);
-    }
-
-    public void GoTo(String url) {
-        driver.get(url);
+    public BasePage (){
+        driver = Hooks.driver;
     }
 
 }

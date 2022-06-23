@@ -1,19 +1,23 @@
 package resources.StepDefinitions;
 
-import Framework.BaseTest;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import resources.WebUi.LoginPage;
 
 
-public class LoginStepdefs extends BaseTest {
-    private LoginPage loginPage;
+public class LoginStepdefs {
+    public LoginPage loginPage;
+
 
     @Given("User Launch Chrome browser")
     public void userLaunchChromeBrowser() {
-        System.out.println("Start test");
+        loginPage = new LoginPage();
     }
 
     @When("User opens URL {string}")

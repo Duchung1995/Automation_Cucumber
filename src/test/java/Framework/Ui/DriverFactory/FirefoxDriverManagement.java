@@ -13,7 +13,6 @@ public class FirefoxDriverManagement extends DriverManagement {
             FirefoxDriver firefoxDriver = new FirefoxDriver();
             return firefoxDriver;
         } catch (Exception e) {
-
             throw e;
         }
     }

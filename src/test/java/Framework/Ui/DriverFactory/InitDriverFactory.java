@@ -1,21 +1,22 @@
 package Framework.Ui.DriverFactory;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+
+import java.util.concurrent.TimeUnit;
 
 public class InitDriverFactory {
 
-    WebDriver driver;
-
-    public InitDriverFactory(WebDriver driver) {
-        this.driver = driver;
-    }
-
+    public WebDriver driver;
 
     public WebDriver GetWebDriver() {
-        String browserType = "chrome";
+        return driver= InitChromeWebDriver();
+    }
+
+    public WebDriver InitChromeWebDriver() {
         driver = new ChromeDriverManagement().InitWebDriver();
         MaximizeWindow();
-//        SetPageLoadTimeOut();
+        SetPageLoadTimeOut();
         return driver;
     }
 
@@ -29,7 +30,7 @@ public class InitDriverFactory {
     }
 
     private void SetPageLoadTimeOut() {
-//        driver.manage().timeouts().pageLoadTimeout(100);
+        driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
     }
 
 }

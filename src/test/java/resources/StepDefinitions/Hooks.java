@@ -1,24 +1,29 @@
 package resources.StepDefinitions;
 
+import Framework.Ui.DriverFactory.InitDriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Hooks {
 
-    public WebDriver driver;
+    public static WebDriver driver;
+    InitDriverFactory initDriverFactory;
+
+//    public Hooks(WebDriver driver){
+//        this.driver=driver;
+//    }
 
     @Before
-    public void IntialiseTest() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+    public void InitTest() {
+        initDriverFactory = new InitDriverFactory();
+        driver = initDriverFactory.GetWebDriver();
+        System.out.println("Start test hooks");
     }
 
     @After
     public void tearDownTest() {
-        driver.quit();
+        initDriverFactory.TerminateWebDriver();
+        System.out.println("End test");
     }
 }

@@ -5,17 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage {
-
-    public LoginPage(WebDriver driver) {
-        super(driver);
-    }
-
-    @Override
-    public void SetPageUrl(String url) {
-        super.SetPageUrl(url);
-    }
 
     @FindBy(id = "Email")
     @CacheLookup
@@ -32,6 +24,14 @@ public class LoginPage extends BasePage {
     @FindBy(linkText = "Logout")
     @CacheLookup
     WebElement lnkLogout;
+
+    public LoginPage() {
+        PageFactory.initElements(driver, this);
+    }
+
+    public void SetPageUrl(String url){
+        driver.get(url);
+    }
 
     public void setUserName(String uname) {
         txtEmail.clear();
