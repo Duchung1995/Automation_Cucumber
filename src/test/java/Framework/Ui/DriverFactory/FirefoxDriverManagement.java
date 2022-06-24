@@ -9,12 +9,7 @@ public class FirefoxDriverManagement extends DriverManagement {
     @Override
     WebDriver InitWebDriver() {
         WebDriverManager.firefoxdriver().setup();
-        try {
-            FirefoxDriver firefoxDriver = new FirefoxDriver();
-            return firefoxDriver;
-        } catch (Exception e) {
-            throw e;
-        }
+        return new FirefoxDriver();
     }
 
 }
