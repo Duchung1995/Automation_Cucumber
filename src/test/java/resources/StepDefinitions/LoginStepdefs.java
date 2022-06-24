@@ -1,5 +1,6 @@
 package resources.StepDefinitions;
 
+import Framework.BasePage;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -12,12 +13,14 @@ import resources.WebUi.LoginPage;
 
 
 public class LoginStepdefs {
-    public LoginPage loginPage;
+    private final LoginPage loginPage;
 
+    public LoginStepdefs(LoginPage loginPage) {
+       this.loginPage = loginPage;
+    }
 
     @Given("User Launch Chrome browser")
     public void userLaunchChromeBrowser() {
-        loginPage = new LoginPage();
     }
 
     @When("User opens URL {string}")

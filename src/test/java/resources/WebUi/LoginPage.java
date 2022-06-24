@@ -25,12 +25,11 @@ public class LoginPage extends BasePage {
     @CacheLookup
     WebElement lnkLogout;
 
-    public LoginPage() {
-        PageFactory.initElements(driver, this);
-    }
+    WebDriver driver;
+    BasePage basePage;
 
     public void SetPageUrl(String url){
-        driver.get(url);
+       getDriver().get(url);
     }
 
     public void setUserName(String uname) {
@@ -53,7 +52,7 @@ public class LoginPage extends BasePage {
     }
 
     public boolean isDisplayed(String url) {
-        if (driver.getCurrentUrl().equalsIgnoreCase(url)) {
+        if ( getDriver().getCurrentUrl().equalsIgnoreCase(url)) {
             return true;
         }
         return false;
