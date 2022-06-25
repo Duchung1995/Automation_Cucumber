@@ -26,7 +26,7 @@ public class LoginPage extends BasePage {
 
     WebDriver driver;
     BasePage basePage;
-    
+
     public void SetPageUrl(String url){
        getDriver().get(url);
     }

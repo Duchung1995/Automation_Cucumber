@@ -6,10 +6,18 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
-// page_url = https://www.google.com/?gws_rd=ssl
 public class Customer {
     @FindBy(xpath = "//div[@class='Umvnrc']")
     public WebElement umvnrcDiv;
+
+    @FindBy(css = "[data-ved = '0ahUKEwjM9qLztsf4AhWGhGMGHUfyB7oQ4dUDCAs']")
+    public WebElement abc;
+
+    @FindBy(css = "[data-ved = '0ahUKEwjM9qLztsf4AhWGhGMGHUfyB7oQ4dUDCAs']")
+    public WebElement aaa;
+
+    @FindBy(xpath = "//span[@class='ly0Ckb']")
+    public WebElement lyCkbSpan;
 
     
 
