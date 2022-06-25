@@ -1,7 +1,7 @@
 package Framework;
 
 
-import Framework.Helper.Log;
+import Framework.Helper.Logs;
 import Framework.Ui.DriverFactory.InitDriverFactory;
 import lombok.Getter;
 import org.openqa.selenium.WebDriver;
@@ -16,12 +16,12 @@ public abstract class BasePage {
     public void setDriver() {
         driver = initDriverFactory.GetWebDriver();
         PageFactory.initElements(driver, this);
-        Log.info("Init test");
+        Logs.info("Init test");
     }
 
     public void endDriver() {
         initDriverFactory.TerminateWebDriver();
-        Log.info("Quit Browser");
-        Log.info("Destroy Driver");
+        Logs.info("Quit Browser");
+        Logs.info("Destroy Driver");
     }
 }

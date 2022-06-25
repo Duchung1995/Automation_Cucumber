@@ -33,4 +33,15 @@ public class InitDriverFactory {
         driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
     }
 
+
+    public enum DriverType {
+        FIREFOX,
+        CHROME,
+        EDGE
+    }
+
+    public enum EnvironmentType {
+        LOCAL,
+        REMOTE,
+    }
 }

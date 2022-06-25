@@ -1,4 +1,4 @@
-package Framework.Ui.Helper.Actions;
+package Framework.Ui.Helper;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
