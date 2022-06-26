@@ -16,6 +16,7 @@ public class ChromeDriverManagement extends DriverManagement {
     private ChromeOptions CreateChromeProfile() {
         ChromeOptions _chromeProfile = new ChromeOptions();
         _chromeProfile.addArguments("start-maximized");
+        _chromeProfile.addArguments("--headless");
         return _chromeProfile;
     }
 }
