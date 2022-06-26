@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="Resources.RunTest.RunTest" time="7.527" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="Resources.RunTest.RunTest" time="1.021" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib"/>
@@ -65,5 +65,166 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="Resources.RunTest.RunTest" name="runScenario" time="7.527"/>
+  <testcase classname="Resources.RunTest.RunTest" name="runScenario" time="1.021">
+    <failure message="unknown error: no chrome binary at /usr/bin/google-chrome
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Hungs-MacBook-Pro.local&apos;, ip: &apos;2402:800:6340:5b96:d8cf:88b5:ab98:9208%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x00000001010cfd19 chromedriver + 5197081
+1   chromedriver                        0x000000010105db23 chromedriver + 4729635
+2   chromedriver                        0x0000000100c3b2b8 chromedriver + 393912
+3   chromedriver                        0x0000000100c5b50f chromedriver + 525583
+4   chromedriver                        0x0000000100c598a6 chromedriver + 518310
+5   chromedriver                        0x0000000100c934ba chromedriver + 754874
+6   chromedriver                        0x0000000100c8d6f3 chromedriver + 730867
+7   chromedriver                        0x0000000100c63a49 chromedriver + 559689
+8   chromedriver                        0x0000000100c64a75 chromedriver + 563829
+9   chromedriver                        0x00000001010a1bdd chromedriver + 5008349
+10  chromedriver                        0x00000001010a6b64 chromedriver + 5028708
+11  chromedriver                        0x00000001010abbcf chromedriver + 5049295
+12  chromedriver                        0x00000001010a77ca chromedriver + 5031882
+13  chromedriver                        0x000000010108159f chromedriver + 4875679
+14  chromedriver                        0x00000001010c1388 chromedriver + 5137288
+15  chromedriver                        0x00000001010c150f chromedriver + 5137679
+16  chromedriver                        0x00000001010d7085 chromedriver + 5226629
+17  libsystem_pthread.dylib             0x00007ff813f354e1 _pthread_start + 125
+18  libsystem_pthread.dylib             0x00007ff813f30f6b thread_start + 15
+" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: unknown error: no chrome binary at /usr/bin/google-chrome
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Hungs-MacBook-Pro.local&apos;, ip: &apos;2402:800:6340:5b96:d8cf:88b5:ab98:9208%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x00000001010cfd19 chromedriver + 5197081
+1   chromedriver                        0x000000010105db23 chromedriver + 4729635
+2   chromedriver                        0x0000000100c3b2b8 chromedriver + 393912
+3   chromedriver                        0x0000000100c5b50f chromedriver + 525583
+4   chromedriver                        0x0000000100c598a6 chromedriver + 518310
+5   chromedriver                        0x0000000100c934ba chromedriver + 754874
+6   chromedriver                        0x0000000100c8d6f3 chromedriver + 730867
+7   chromedriver                        0x0000000100c63a49 chromedriver + 559689
+8   chromedriver                        0x0000000100c64a75 chromedriver + 563829
+9   chromedriver                        0x00000001010a1bdd chromedriver + 5008349
+10  chromedriver                        0x00000001010a6b64 chromedriver + 5028708
+11  chromedriver                        0x00000001010abbcf chromedriver + 5049295
+12  chromedriver                        0x00000001010a77ca chromedriver + 5031882
+13  chromedriver                        0x000000010108159f chromedriver + 4875679
+14  chromedriver                        0x00000001010c1388 chromedriver + 5137288
+15  chromedriver                        0x00000001010c150f chromedriver + 5137679
+16  chromedriver                        0x00000001010d7085 chromedriver + 5226629
+17  libsystem_pthread.dylib             0x00007ff813f354e1 _pthread_start + 125
+18  libsystem_pthread.dylib             0x00007ff813f30f6b thread_start + 15
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at Framework.Ui.DriverFactory.ChromeDriverManagement.InitWebDriver(ChromeDriverManagement.java:13)
+	at Framework.Ui.DriverFactory.InitDriverFactory.InitChromeWebDriver(InitDriverFactory.java:17)
+	at Framework.Ui.DriverFactory.InitDriverFactory.GetWebDriver(InitDriverFactory.java:13)
+	at Framework.BasePage.setDriver(BasePage.java:17)
+	at Resources.StepDefinitions.Hooks.InitTest(Hooks.java:16)
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@1b40d5f0
+
+@sanity
+Scenario: Login to home page                                                          &amp;#27;[90m# src/test/java/Resources/Feature/Login.feature:3&amp;#27;[0m
+      &amp;#27;[31morg.openqa.selenium.WebDriverException: unknown error: no chrome binary at /usr/bin/google-chrome
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Hungs-MacBook-Pro.local&apos;, ip: &apos;2402:800:6340:5b96:d8cf:88b5:ab98:9208%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x00000001010cfd19 chromedriver + 5197081
+1   chromedriver                        0x000000010105db23 chromedriver + 4729635
+2   chromedriver                        0x0000000100c3b2b8 chromedriver + 393912
+3   chromedriver                        0x0000000100c5b50f chromedriver + 525583
+4   chromedriver                        0x0000000100c598a6 chromedriver + 518310
+5   chromedriver                        0x0000000100c934ba chromedriver + 754874
+6   chromedriver                        0x0000000100c8d6f3 chromedriver + 730867
+7   chromedriver                        0x0000000100c63a49 chromedriver + 559689
+8   chromedriver                        0x0000000100c64a75 chromedriver + 563829
+9   chromedriver                        0x00000001010a1bdd chromedriver + 5008349
+10  chromedriver                        0x00000001010a6b64 chromedriver + 5028708
+11  chromedriver                        0x00000001010abbcf chromedriver + 5049295
+12  chromedriver                        0x00000001010a77ca chromedriver + 5031882
+13  chromedriver                        0x000000010108159f chromedriver + 4875679
+14  chromedriver                        0x00000001010c1388 chromedriver + 5137288
+15  chromedriver                        0x00000001010c150f chromedriver + 5137679
+16  chromedriver                        0x00000001010d7085 chromedriver + 5226629
+17  libsystem_pthread.dylib             0x00007ff813f354e1 _pthread_start + 125
+18  libsystem_pthread.dylib             0x00007ff813f30f6b thread_start + 15
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at Framework.Ui.DriverFactory.ChromeDriverManagement.InitWebDriver(ChromeDriverManagement.java:13)
+	at Framework.Ui.DriverFactory.InitDriverFactory.InitChromeWebDriver(InitDriverFactory.java:17)
+	at Framework.Ui.DriverFactory.InitDriverFactory.GetWebDriver(InitDriverFactory.java:13)
+	at Framework.BasePage.setDriver(BasePage.java:17)
+	at Resources.StepDefinitions.Hooks.InitTest(Hooks.java:16)
+&amp;#27;[0m
+  &amp;#27;[36mGiven &amp;#27;[0m&amp;#27;[36mUser Launch Chrome browser&amp;#27;[0m                                                    &amp;#27;[90m# Resources.StepDefinitions.LoginStepdefs.userLaunchChromeBrowser()&amp;#27;[0m
+  &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mUser opens URL &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;http://admin-demo.nopcommerce.com/login&quot;&amp;#27;[0m                       &amp;#27;[90m# Resources.StepDefinitions.LoginStepdefs.userOpensURL(java.lang.String)&amp;#27;[0m
+  &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mUser enters Email as &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;admin@yourstore.com&quot;&amp;#27;[0m&amp;#27;[36m and Password as &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;admin&quot;&amp;#27;[0m              &amp;#27;[90m# Resources.StepDefinitions.LoginStepdefs.userEntersEmailAsAndPasswordAs(java.lang.String,java.lang.String)&amp;#27;[0m
+  &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mClick on Login&amp;#27;[0m                                                                  &amp;#27;[90m# Resources.StepDefinitions.LoginStepdefs.clickOnLogin()&amp;#27;[0m
+  &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mURL should be &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;https://admin-demo.nopcommerce.com/admin/&quot;&amp;#27;[0m                      &amp;#27;[90m# Resources.StepDefinitions.LoginStepdefs.urlShouldBe(java.lang.String)&amp;#27;[0m
+  &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mUser click on Log out link&amp;#27;[0m                                                     &amp;#27;[90m# Resources.StepDefinitions.LoginStepdefs.userClickOnLogOutLink()&amp;#27;[0m
+  &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mURL should be &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m&quot;https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F&quot;&amp;#27;[0m &amp;#27;[90m# Resources.StepDefinitions.LoginStepdefs.urlShouldBe(java.lang.String)&amp;#27;[0m
+  &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mclose browser&amp;#27;[0m                                                                   &amp;#27;[90m# Resources.StepDefinitions.LoginStepdefs.closeBrowser()&amp;#27;[0m
+      &amp;#27;[31mjava.lang.NullPointerException
+	at Framework.Ui.DriverFactory.InitDriverFactory.TerminateWebDriver(InitDriverFactory.java:24)
+	at Framework.BasePage.endDriver(BasePage.java:23)
+	at Resources.StepDefinitions.Hooks.tearDownTest(Hooks.java:21)
+&amp;#27;[0m
+</system-out>
+    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}) on port 25266
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+</system-err>
+  </testcase>
 </testsuite>

@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Resources_RunTest_RunTest">
-              <span class="suite-name border-passed">Resources.RunTest.RunTest</span>
+              <span class="suite-name border-failed">Resources.RunTest.RunTest</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Resources_RunTest_RunTest" class="hide-methods passed suite-Resources_RunTest_RunTest"> (hide)</a> <!-- hide-methods passed suite-Resources_RunTest_RunTest -->
-                      <a href="#" panel-name="suite-Resources_RunTest_RunTest" class="show-methods passed suite-Resources_RunTest_RunTest"> (show)</a> <!-- show-methods passed suite-Resources_RunTest_RunTest -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Resources_RunTest_RunTest" class="hide-methods failed suite-Resources_RunTest_RunTest"> (hide)</a> <!-- hide-methods failed suite-Resources_RunTest_RunTest -->
+                      <a href="#" panel-name="suite-Resources_RunTest_RunTest" class="show-methods failed suite-Resources_RunTest_RunTest"> (show)</a> <!-- show-methods failed suite-Resources_RunTest_RunTest -->
                     </span>
-                    <div class="method-list-content passed suite-Resources_RunTest_RunTest">
+                    <div class="method-list-content failed suite-Resources_RunTest_RunTest">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Resources_RunTest_RunTest" title="Resources.RunTest.RunTest" hash-for-method="runScenario(&quot;Login to home page&quot;, &quot;Optional[Login]&quot;)">runScenario("Login to home page", "Optional[Login]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Resources_RunTest_RunTest -->
+                    </div> <!-- method-list-content failed suite-Resources_RunTest_RunTest -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Resources_RunTest_RunTest" class="panel Resources_RunTest_RunTest">
-          <div class="suite-Resources_RunTest_RunTest-class-passed">
+          <div class="suite-Resources_RunTest_RunTest-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Resources.RunTest.RunTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -131,12 +131,65 @@
                   </a> <!-- runScenario("Login to home page", "Optional[Login]") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Login to home page", "Optional[Login]")</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: no chrome binary at /usr/bin/google-chrome
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Hungs-MacBook-Pro.local&apos;, ip: &apos;2402:800:6340:5b96:d8cf:88b5:ab98:9208%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x00000001010cfd19 chromedriver + 5197081
+1   chromedriver                        0x000000010105db23 chromedriver + 4729635
+2   chromedriver                        0x0000000100c3b2b8 chromedriver + 393912
+3   chromedriver                        0x0000000100c5b50f chromedriver + 525583
+4   chromedriver                        0x0000000100c598a6 chromedriver + 518310
+5   chromedriver                        0x0000000100c934ba chromedriver + 754874
+6   chromedriver                        0x0000000100c8d6f3 chromedriver + 730867
+7   chromedriver                        0x0000000100c63a49 chromedriver + 559689
+8   chromedriver                        0x0000000100c64a75 chromedriver + 563829
+9   chromedriver                        0x00000001010a1bdd chromedriver + 5008349
+10  chromedriver                        0x00000001010a6b64 chromedriver + 5028708
+11  chromedriver                        0x00000001010abbcf chromedriver + 5049295
+12  chromedriver                        0x00000001010a77ca chromedriver + 5031882
+13  chromedriver                        0x000000010108159f chromedriver + 4875679
+14  chromedriver                        0x00000001010c1388 chromedriver + 5137288
+15  chromedriver                        0x00000001010c150f chromedriver + 5137679
+16  chromedriver                        0x00000001010d7085 chromedriver + 5226629
+17  libsystem_pthread.dylib             0x00007ff813f354e1 _pthread_start + 125
+18  libsystem_pthread.dylib             0x00007ff813f30f6b thread_start + 15
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at Framework.Ui.DriverFactory.ChromeDriverManagement.InitWebDriver(ChromeDriverManagement.java:13)
+	at Framework.Ui.DriverFactory.InitDriverFactory.InitChromeWebDriver(InitDriverFactory.java:17)
+	at Framework.Ui.DriverFactory.InitDriverFactory.GetWebDriver(InitDriverFactory.java:13)
+	at Framework.BasePage.setDriver(BasePage.java:17)
+	at Resources.StepDefinitions.Hooks.InitTest(Hooks.java:16)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Resources_RunTest_RunTest-class-passed -->
+          </div> <!-- suite-Resources_RunTest_RunTest-class-failed -->
         </div> <!-- panel Resources_RunTest_RunTest -->
         <div panel-name="test-xml-Resources_RunTest_RunTest" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -200,12 +253,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Resources.RunTest.RunTest')
-data.setCell(0, 3, 7526);
+data.setCell(0, 3, 986);
 window.suiteTableData['Resources_RunTest_RunTest']= { tableData: data, tableDiv: 'times-div-Resources_RunTest_RunTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 986 ms</span>
               <div id="times-div-Resources_RunTest_RunTest">
               </div> <!-- times-div-Resources_RunTest_RunTest -->
             </div> <!-- times-div -->
@@ -237,12 +290,14 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("Login to home page", "Optional[Login]")</span>
-                <span class="method-start">468 ms</span>
+                <span class="method-start">458 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">7996 ms</span>
+                <span class="method-start">1453 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

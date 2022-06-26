@@ -17,7 +17,8 @@ public class ChromeDriverManagement extends DriverManagement {
         ChromeOptions _chromeProfile = new ChromeOptions();
         _chromeProfile.addArguments("start-maximized");
         _chromeProfile.addArguments("--headless");
-        _chromeProfile.addArguments("/usr/bin/google-chrome");
+//        _chromeProfile.addArguments("/usr/bin/google-chrome");
+        _chromeProfile.setBinary("/usr/bin/google-chrome");
         return _chromeProfile;
     }
 }

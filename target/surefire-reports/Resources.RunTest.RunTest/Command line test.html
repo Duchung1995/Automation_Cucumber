@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jun 26 20:11:20 ICT 2022</td>
+<td>Started on:</td><td>Sun Jun 26 20:17:49 ICT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>8 seconds (8327 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1883 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,8 +76,115 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='Resources.RunTest.RunTest.runScenario()'><b>runScenario</b><br>Test class: Resources.RunTest.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login to home page", "Optional[Login]"</td>
-<td></td>
-<td>7</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: no chrome binary at /usr/bin/google-chrome
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Hungs-MacBook-Pro.local&apos;, ip: &apos;2402:800:6340:5b96:d8cf:88b5:ab98:9208%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x00000001010cfd19 chromedriver + 5197081
+1   chromedriver                        0x000000010105db23 chromedriver + 4729635
+2   chromedriver                        0x0000000100c3b2b8 chromedriver + 393912
+3   chromedriver                        0x0000000100c5b50f chromedriver + 525583
+4   chromedriver                        0x0000000100c598a6 chromedriver + 518310
+5   chromedriver                        0x0000000100c934ba chromedriver + 754874
+6   chromedriver                        0x0000000100c8d6f3 chromedriver + 730867
+7   chromedriver                        0x0000000100c63a49 chromedriver + 559689
+8   chromedriver                        0x0000000100c64a75 chromedriver + 563829
+9   chromedriver                        0x00000001010a1bdd chromedriver + 5008349
+10  chromedriver                        0x00000001010a6b64 chromedriver + 5028708
+11  chromedriver                        0x00000001010abbcf chromedriver + 5049295
+12  chromedriver                        0x00000001010a77ca chromedriver + 5031882
+13  chromedriver                        0x000000010108159f chromedriver + 4875679
+14  chromedriver                        0x00000001010c1388 chromedriver + 5137288
+15  chromedriver                        0x00000001010c150f chromedriver + 5137679
+16  chromedriver                        0x00000001010d7085 chromedriver + 5226629
+17  libsystem_pthread.dylib             0x00007ff813f354e1 _pthread_start + 125
+18  libsystem_pthread.dylib             0x00007ff813f30f6b thread_start + 15
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at Framework.Ui.DriverFactory.ChromeDriverManagement.InitWebDriver(ChromeDriverManagement.java:13)
+	at Framework.Ui.DriverFactory.InitDriverFactory.InitChromeWebDriver(InitDriverFactory.java:17)
+	at Framework.Ui.DriverFactory.InitDriverFactory.GetWebDriver(InitDriverFactory.java:13)
+	at Framework.BasePage.setDriver(BasePage.java:17)
+	at Resources.StepDefinitions.Hooks.InitTest(Hooks.java:16)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1161382705", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1161382705'><pre>org.openqa.selenium.WebDriverException: unknown error: no chrome binary at /usr/bin/google-chrome
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Hungs-MacBook-Pro.local&apos;, ip: &apos;2402:800:6340:5b96:d8cf:88b5:ab98:9208%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x00000001010cfd19 chromedriver + 5197081
+1   chromedriver                        0x000000010105db23 chromedriver + 4729635
+2   chromedriver                        0x0000000100c3b2b8 chromedriver + 393912
+3   chromedriver                        0x0000000100c5b50f chromedriver + 525583
+4   chromedriver                        0x0000000100c598a6 chromedriver + 518310
+5   chromedriver                        0x0000000100c934ba chromedriver + 754874
+6   chromedriver                        0x0000000100c8d6f3 chromedriver + 730867
+7   chromedriver                        0x0000000100c63a49 chromedriver + 559689
+8   chromedriver                        0x0000000100c64a75 chromedriver + 563829
+9   chromedriver                        0x00000001010a1bdd chromedriver + 5008349
+10  chromedriver                        0x00000001010a6b64 chromedriver + 5028708
+11  chromedriver                        0x00000001010abbcf chromedriver + 5049295
+12  chromedriver                        0x00000001010a77ca chromedriver + 5031882
+13  chromedriver                        0x000000010108159f chromedriver + 4875679
+14  chromedriver                        0x00000001010c1388 chromedriver + 5137288
+15  chromedriver                        0x00000001010c150f chromedriver + 5137679
+16  chromedriver                        0x00000001010d7085 chromedriver + 5226629
+17  libsystem_pthread.dylib             0x00007ff813f354e1 _pthread_start + 125
+18  libsystem_pthread.dylib             0x00007ff813f30f6b thread_start + 15
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at Framework.Ui.DriverFactory.ChromeDriverManagement.InitWebDriver(ChromeDriverManagement.java:13)
+	at Framework.Ui.DriverFactory.InitDriverFactory.InitChromeWebDriver(InitDriverFactory.java:17)
+	at Framework.Ui.DriverFactory.InitDriverFactory.GetWebDriver(InitDriverFactory.java:13)
+	at Framework.BasePage.setDriver(BasePage.java:17)
+	at Resources.StepDefinitions.Hooks.InitTest(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
 <td>Resources.RunTest.RunTest@2173f6d9</td></tr>
 </table><p>
 </body>

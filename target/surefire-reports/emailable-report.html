@@ -9,10 +9,61 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Resources.RunTest.RunTest</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">8,327</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Command line test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">1,883</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Resources.RunTest.RunTest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Resources.RunTest.RunTest</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1656249081176</td><td rowspan="1">7526</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Resources.RunTest.RunTest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Resources.RunTest.RunTest</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1656249469949</td><td rowspan="1">986</td></tr></tbody>
 </table>
-<h2>Command line test</h2><h3 id="m0">Resources.RunTest.RunTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login to home page&quot;</td><td>&quot;Optional[Login]&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Command line test</h2><h3 id="m0">Resources.RunTest.RunTest#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login to home page&quot;</td><td>&quot;Optional[Login]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: no chrome binary at /usr/bin/google-chrome
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Hungs-MacBook-Pro.local&apos;, ip: &apos;2402:800:6340:5b96:d8cf:88b5:ab98:9208%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x00000001010cfd19 chromedriver + 5197081
+1   chromedriver                        0x000000010105db23 chromedriver + 4729635
+2   chromedriver                        0x0000000100c3b2b8 chromedriver + 393912
+3   chromedriver                        0x0000000100c5b50f chromedriver + 525583
+4   chromedriver                        0x0000000100c598a6 chromedriver + 518310
+5   chromedriver                        0x0000000100c934ba chromedriver + 754874
+6   chromedriver                        0x0000000100c8d6f3 chromedriver + 730867
+7   chromedriver                        0x0000000100c63a49 chromedriver + 559689
+8   chromedriver                        0x0000000100c64a75 chromedriver + 563829
+9   chromedriver                        0x00000001010a1bdd chromedriver + 5008349
+10  chromedriver                        0x00000001010a6b64 chromedriver + 5028708
+11  chromedriver                        0x00000001010abbcf chromedriver + 5049295
+12  chromedriver                        0x00000001010a77ca chromedriver + 5031882
+13  chromedriver                        0x000000010108159f chromedriver + 4875679
+14  chromedriver                        0x00000001010c1388 chromedriver + 5137288
+15  chromedriver                        0x00000001010c150f chromedriver + 5137679
+16  chromedriver                        0x00000001010d7085 chromedriver + 5226629
+17  libsystem_pthread.dylib             0x00007ff813f354e1 _pthread_start + 125
+18  libsystem_pthread.dylib             0x00007ff813f30f6b thread_start + 15
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at Framework.Ui.DriverFactory.ChromeDriverManagement.InitWebDriver(ChromeDriverManagement.java:13)
+	at Framework.Ui.DriverFactory.InitDriverFactory.InitChromeWebDriver(InitDriverFactory.java:17)
+	at Framework.Ui.DriverFactory.InitDriverFactory.GetWebDriver(InitDriverFactory.java:13)
+	at Framework.BasePage.setDriver(BasePage.java:17)
+	at Resources.StepDefinitions.Hooks.InitTest(Hooks.java:16)
+... Removed 4 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
